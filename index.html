@@ -63,7 +63,7 @@
         }
         
         .offer-card {
-            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.1) 100%);
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.10) 100%);
             backdrop-filter: blur(2px);
             border: 1px solid rgba(255,255,255,0.15);
             box-shadow: 0 15px 40px rgba(0,0,0,0.6);
@@ -111,6 +111,39 @@
         .social-hover:hover {
             transform: scale(1.2) translateY(-3px);
         }
+        
+        .old-price {
+            position: relative;
+            display: inline-block;
+            margin-right: 10px;
+            color: #999;
+        }
+        
+        .old-price::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 2px;
+            background: #ff3586;
+            transform: translateY(-50%) rotate(-5deg);
+        }
+        
+        .promo-banner {
+            background: linear-gradient(90deg, #ff3586 0%, #9c27b0 50%, #ff3586 100%);
+            background-size: 200% auto;
+            animation: gradient 3s linear infinite;
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 0% center;
+            }
+            100% {
+                background-position: 200% center;
+            }
+        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -118,9 +151,9 @@
     <header class="py-6 px-4 md:px-8 bg-black bg-opacity-90 backdrop-blur-sm sticky top-0 z-50 border-b border-pink-900">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <img src="sv (13).png" 
-                     alt="Esther Veiga" 
-                     class="profile-img w-14 h-14 rounded-full object-cover">
+                <img src="sv (13).png"
+                      alt="Esther Veiga"
+                      class="profile-img w-14 h-14 rounded-full object-cover">
                 <h1 class="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-500">ESTHER VEIGA</h1>
             </div>
             <div class="flex space-x-6">
@@ -134,6 +167,21 @@
         </div>
     </header>
 
+    <!-- Promotional Banner -->
+    <div class="promo-banner text-white text-center py-3 px-4 relative z-10">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-1 md:space-y-0 md:space-x-4">
+                <span class="font-bold text-lg animate-pulse">🔥 PROMOÇÃO RELÂMPAGO! 🔥</span>
+                <span>PACK COMPLETO PELA METADE DO PREÇO!</span>
+                <div class="flex items-center">
+                    <span class="old-price text-lg">R$ 39,90</span>
+                    <span class="font-bold text-xl">R$ 19,90</span>
+                </div>
+                <span class="font-bold">POR TEMPO LIMITADO!</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Content -->
     <main class="relative overflow-hidden">
         <!-- Gallery Background - Now Double Size -->
@@ -141,74 +189,97 @@
             <div class="gallery-slider">
                 <!-- Gallery Items will be duplicated for seamless animation -->
                 <div class="gallery-item">
-                    <img src="sv (1).jpg" 
+                    <img src="sv (1).jpg"
+                          alt="Esther Veiga" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item">
+                    <img src="sv (1).png"
                          alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (1).png"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (2).jpg"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (2).jpg"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (2).png"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (2).png"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (3).jpg"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (3).jpg"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (3).png"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (3).png"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (4).jpg"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (4).jpg"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (4).png"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (4).png"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (5).jpg"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (5).jpg"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (5).png"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (5).png"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (6).jpg"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (6).jpg"                          alt="Esther Veiga" class="w-full h-full object-cover">
-                </div>
-                <div class="gallery-item">
-                    <img src="sv (6).png"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (6).png"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <!-- Duplicate items for seamless loop -->
                 <div class="gallery-item">
-                    <img src="sv (7).jpg"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (7).jpg"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (7).png"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (7).png"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (8).jpg"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (8).jpg"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (8).jpg"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (8).jpg"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (9).jpg"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (9).jpg"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (9).png"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (9).png"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (10).jpg"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (10).jpg"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="sv (10).png"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (10).png"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div><div class="gallery-item">
-                    <img src="sv (11).jpg"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (11).jpg"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div><div class="gallery-item">
-                    <img src="sv (11).png"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (11).png"
+                         alt="Esther Veiga" class="w-full h-full object-cover>
                 </div><div class="gallery-item">
-                    <img src="sv (12).png"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (12).png"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div><div class="gallery-item">
-                    <img src="sv (12).png"                          alt="Esther Veiga" class="w-full h-full object-cover">
+                    <img src="sv (12).png"
+                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
@@ -218,7 +289,7 @@
             <div class="container mx-auto max-w-5xl">
                 <!-- Special Offer Banner -->
                 <div class="bg-gradient-to-r from-pink-600 to-purple-700 text-white text-center py-3 px-4 rounded-lg mb-8 animate-pulse">
-                    <span class="font-bold">OFERTA ESPECIAL:</span> Apenas hoje - Pack completo por R$39,90!
+                    <span class="font-bold">OFERTA ESPECIAL:</span> Pack completo por R$19,90!
                 </div>
                 
                 <!-- Offer Card -->
@@ -230,9 +301,9 @@
                     
                     <div class="flex justify-center mb-12">
                         <div class="relative">
-                            <img src="sv (4).png" 
-                                 alt="Esther Veiga" 
-                                 class="w-56 h-56 md:w-72 md:h-72 rounded-full object-cover border-4 border-pink-500 pulse">
+                            <img src="sv (4).png"
+                                  alt="Esther Veiga"
+                                  class="w-56 h-56 md:w-72 md:h-72 rounded-full object-cover border-4 border-pink-500 pulse">
                             <div class="absolute -bottom-4 -right-4 bg-pink-600 text-white px-5 py-2 rounded-full font-bold text-sm md:text-base">
                                 EXCLUSIVO
                             </div>
@@ -263,13 +334,16 @@
                     </div>
                     
                     <div class="mb-12">
-                        <div class="text-6xl font-bold text-pink-400 mb-2">R$ 39,90</div>
-                        <div class="text-sm opacity-80">Acesso vitalício • Download imediato • Conteúdo inédito</div>
+                        <div class="flex items-center justify-center space-x-4">
+                            <span class="old-price text-3xl">R$ 39,90</span>
+                            <span class="text-6xl font-bold text-pink-400">R$ 19,90</span>
+                        </div>
+                        <div class="text-sm opacity-80 mt-2">Acesso vitalício • Download imediato • Conteúdo inédito</div>
                     </div>
                     
                     <div class="flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-6 justify-center">
-                        <a href="https://pay.kiwify.com.br/gy1NmML" 
-                           class="btn-glow bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white py-5 px-10 rounded-full font-bold text-xl transition duration-300 transform hover:scale-105">
+                        <a href="https://pay.kiwify.com.br/gy1NmML"
+                            class="btn-glow bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white py-5 px-10 rounded-full font-bold text-xl transition duration-300 transform hover:scale-105">
                             <i class="fas fa-shopping-cart mr-2"></i> COMPRAR AGORA
                         </a>
                         
@@ -318,7 +392,7 @@
             </div>
         </div>
     </main>
-
+    
     <!-- Footer -->
     <footer class="bg-black bg-opacity-95 py-10 px-4 relative z-10 border-t border-pink-900">
         <div class="container mx-auto text-center">
@@ -338,7 +412,7 @@
             </p>
         </div>
     </footer>
-
+    
     <script>
         // Simple script for gallery hover pause
         document.addEventListener('DOMContentLoaded', function() {
