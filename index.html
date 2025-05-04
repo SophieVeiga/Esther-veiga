@@ -144,22 +144,12 @@
                 background-position: 200% center;
             }
         }
-
-        .or-divider {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.25rem;
-            margin: 0 1rem;
-        }
-
+        
         .vip-btn {
             background: linear-gradient(to right, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
             color: #000;
         }
-
+        
         .vip-btn:hover {
             background: linear-gradient(to right, #fad0c4 0%, #ff9a9e 99%, #ff9a9e 100%);
             box-shadow: 0 0 20px rgba(255, 154, 158, 0.7);
@@ -175,22 +165,49 @@
             box-shadow: 0 0 20px rgba(79, 172, 254, 0.7);
         }
         
-        .button-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            align-items: center;
+        .section-divider {
+            height: 100px;
+            background: linear-gradient(to bottom, rgba(255,53,134,0.3), rgba(0,0,0,0));
+            margin-top: -50px;
+            z-index: 5;
+            position: relative;
         }
         
-        @media (max-width: 768px) {
-            .button-group {
-                flex-direction: column;
-            }
-            
-            .or-divider {
-                margin: 0.5rem 0;
-            }
+        .vip-section {
+            background: linear-gradient(to bottom, #1a1a2e, #16213e);
+        }
+        
+        .sorteio-section {
+            background: linear-gradient(to bottom, #16213e, #0f3460);
+        }
+        
+        .diamond-icon {
+            color: #00f2fe;
+            text-shadow: 0 0 10px rgba(0, 242, 254, 0.7);
+        }
+        
+        .heartbeat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 10px rgba(255, 53, 134, 0.7);
+        }
+        
+        .vip-glow {
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+        
+        .sorteio-glow {
+            box-shadow: 0 0 30px rgba(79, 172, 254, 0.5);
         }
     </style>
 </head>
@@ -230,12 +247,12 @@
         </div>
     </div>
 
-    <!-- Main Content -->
-    <main class="relative overflow-hidden">
-        <!-- Gallery Background - Now Double Size -->
+    <!-- SECTION 1: PACK EXCLUSIVO -->
+    <section class="relative overflow-hidden min-h-screen">
+        <!-- Gallery Background -->
         <div class="absolute inset-0 overflow-hidden opacity-50 z-0 mt-20">
             <div class="gallery-slider">
-                <!-- Gallery Items will be duplicated for seamless animation -->
+                <!-- Gallery Items -->
                 <div class="gallery-item">
                     <img src="sv (1).jpg"
                           alt="Esther Veiga" class="w-full h-full object-cover">
@@ -276,6 +293,7 @@
                     <img src="sv (5).png"
                          alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
+                <!-- Duplicate items for seamless loop -->
                 <div class="gallery-item">
                     <img src="sv (6).jpg"
                          alt="Esther Veiga" class="w-full h-full object-cover">
@@ -284,7 +302,6 @@
                     <img src="sv (6).png"
                          alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
-                <!-- Duplicate items for seamless loop -->
                 <div class="gallery-item">
                     <img src="sv (7).jpg"
                          alt="Esther Veiga" class="w-full h-full object-cover">
@@ -316,18 +333,6 @@
                 <div class="gallery-item">
                     <img src="sv (10).png"
                          alt="Esther Veiga" class="w-full h-full object-cover">
-                </div><div class="gallery-item">
-                    <img src="sv (11).jpg"
-                         alt="Esther Veiga" class="w-full h-full object-cover">
-                </div><div class="gallery-item">
-                    <img src="sv (11).png"
-                         alt="Esther Veiga" class="w-full h-full object-cover>
-                </div><div class="gallery-item">
-                    <img src="sv (12).png"
-                         alt="Esther Veiga" class="w-full h-full object-cover">
-                </div><div class="gallery-item">
-                    <img src="sv (12).png"
-                         alt="Esther Veiga" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
@@ -339,14 +344,14 @@
                 <div class="bg-gradient-to-r from-pink-600 to-purple-700 text-white text-center py-3 px-4 rounded-lg mb-8 animate-pulse">
                     <span class="font-bold">OFERTA ESPECIAL:</span> Pack completo por R$19,90!
                 </div>
-                                                
+
                 <!-- Offer Card -->
                 <div class="offer-card rounded-2xl p-8 md:p-12 text-center">
                     <h2 class="hero-title text-4xl md:text-6xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-500">PACK EXCLUSIVO</h2>
                     <p class="text-xl md:text-2xl mb-8 opacity-90 font-medium">
                         Conteúdo EXCLUSIVO que você não encontra em nenhum outro lugar.
                     </p>
-                                                            
+
                     <div class="flex justify-center mb-12">
                         <div class="relative">
                             <img src="sv (4).png"
@@ -357,7 +362,7 @@
                             </div>
                         </div>
                     </div>
-                                                            
+
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                         <div class="bg-black bg-opacity-50 p-5 rounded-xl border border-pink-900 transform hover:scale-105 transition duration-300">
                             <div class="text-5xl font-bold text-pink-400 mb-2">+ de 480 </div>
@@ -372,7 +377,7 @@
                             <div class="text-sm uppercase tracking-wider opacity-90">PRIVADO</div>
                         </div>
                     </div>
-                                                            
+
                     <!-- Countdown Timer -->
                     <div class="mb-10 bg-black bg-opacity-50 p-4 rounded-xl border border-pink-900 max-w-md mx-auto">
                         <div class="text-sm uppercase tracking-wider mb-2">OFERTA TERMINA EM:</div>
@@ -380,7 +385,7 @@
                             <span id="hours">03</span>:<span id="minutes">45</span>:<span id="seconds">22</span>
                         </div>
                     </div>
-                                                            
+
                     <div class="mb-12">
                         <div class="flex items-center justify-center space-x-4">
                             <span class="old-price text-3xl">R$ 39,90</span>
@@ -388,75 +393,122 @@
                         </div>
                         <div class="text-sm opacity-80 mt-2">Acesso vitalício • Download imediato • Conteúdo inédito</div>
                     </div>
-                                                            
-                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6 mb-8">
+
+                    <!-- Only the COMPRAR AGORA button in this section -->
+                    <div class="flex justify-center">
                         <a href="https://pay.kiwify.com.br/gy1NmML"
                             class="btn-glow bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white py-5 px-10 rounded-full font-bold text-xl transition duration-300 transform hover:scale-105">
                             <i class="fas fa-shopping-cart mr-2"></i> COMPRAR AGORA
                         </a>
-                                                
-                        <div class="or-divider">
-                            OU
-                        </div>
-                                                
-                        <a href="https://pay.kiwify.com.br/U06UrJ7"
-                            class="btn-glow vip-btn py-5 px-10 rounded-full font-bold text-xl transition duration-300 transform hover:scale-105">
-                            <i class="fas fa-crown mr-2"></i> ENTRAR NO GRUPO VIP
-                        </a>
-                    </div>
-                    
-                    <!-- New Sorteio Button -->
-                    <div class="button-group">
-                        <a href="https://livepix.gg/vaquinha/Sorteio"
-                            class="btn-glow sorteio-btn py-4 px-8 rounded-full font-bold text-lg transition duration-300 transform hover:scale-105">
-                            <i class="fas fa-gift mr-2"></i> PARTICIPAR DO SORTEIO
-                        </a>
-                    </div>
-                </div>
-                                                
-                <!-- Testimonials -->
-                <div class="mt-20 text-center">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-500">O QUE MEUS FÃS ESTÃO DIZENDO</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="bg-black bg-opacity-50 p-8 rounded-xl border border-pink-900 transform hover:scale-102 transition duration-300">
-                            <div class="text-yellow-400 mb-3 text-xl">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="italic mb-6 text-lg">"O conteúdo da Esther é de outro mundo! Cada centavo vale a pena."</p>
-                            <div class="text-sm opacity-80">- Lucas, 28</div>
-                        </div>
-                        <div class="bg-black bg-opacity-50 p-8 rounded-xl border border-pink-900 transform hover:scale-102 transition duration-300">
-                            <div class="text-yellow-400 mb-3 text-xl">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="italic mb-6 text-lg">"Nunca vi nada igual, ela é perfeita em cada detalhe!"</p>
-                            <div class="text-sm opacity-80">- Rafael, 31</div>
-                        </div>
-                        <div class="bg-black bg-opacity-50 p-8 rounded-xl border border-pink-900 transform hover:scale-102 transition duration-300">
-                            <div class="text-yellow-400 mb-3 text-xl">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <p class="italic mb-6 text-lg">"Já comprei três vezes e sempre volto por mais!"</p>
-                            <div class="text-sm opacity-80">- Diego, 25</div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-            
+    </section>
+
+    <!-- SECTION 2: VIP GROUP -->
+    <div class="section-divider"></div>
+    <section class="vip-section relative overflow-hidden min-h-screen py-20 px-4">
+        <div class="container mx-auto max-w-5xl relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-6 py-2 rounded-full mb-4">
+                    <i class="fas fa-crown mr-2"></i> EXCLUSIVO PARA VIPS
+                </div>
+                <h2 class="hero-title text-4xl md:text-6xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">GRUPO VIP</h2>
+            </div>
+
+            <div class="offer-card rounded-2xl p-8 md:p-12 text-center vip-glow">
+                <div class="flex justify-center mb-12">
+                    <div class="relative">
+                        <img src="sv (5).png"
+                              alt="Esther Veiga"
+                              class="w-56 h-56 md:w-72 md:h-72 rounded-full object-cover border-4 border-yellow-500 pulse">
+                        <div class="absolute -bottom-4 -right-4 bg-yellow-600 text-black px-5 py-2 rounded-full font-bold text-sm md:text-base">
+                            VIP ONLY
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-2xl mx-auto mb-12">
+                    <div class="bg-black bg-opacity-70 p-6 rounded-xl border border-yellow-900">
+                        <p class="text-xl md:text-2xl mb-4 text-yellow-300 font-medium">
+                            ✨ ATENÇÃO VIPS DE PLANTÃO ✨
+                        </p>
+                        <p class="text-lg md:text-xl mb-4">
+                            Não é pra qualquer um... 👀 Mas hoje surgiu uma oportunidade que você com certeza vai querer entrar...
+                        </p>
+                        <p class="text-lg md:text-xl mb-4">
+                            🚪 Um grupo fechado acaba de ser criado. 🔥 O conteúdo? Digamos que... é só pros de mente aberta.
+                        </p>
+                        <p class="text-lg md:text-xl mb-4">
+                            E o melhor? 50% OFF pra quem quiser entrar agora e receber o tipo de conteúdo que não se posta no feed 😏
+                        </p>
+                        <p class="text-lg md:text-xl mb-4">
+                            📥 Link na bio / chama no direct Mas vem com calma... porque não é pra todo mundo 😈
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <a href="https://pay.kiwify.com.br/U06UrJ7"
+                        class="btn-glow vip-btn py-5 px-10 rounded-full font-bold text-xl transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-crown mr-2"></i> ENTRAR NO GRUPO VIP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: SORTEIO -->
+    <div class="section-divider"></div>
+    <section class="sorteio-section relative overflow-hidden min-h-screen py-20 px-4">
+        <div class="container mx-auto max-w-5xl relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-gradient-to-r from-blue-400 to-blue-600 text-white px-6 py-2 rounded-full mb-4">
+                    <i class="fas fa-gift mr-2 heartbeat"></i> SORTEIO EXCLUSIVO
+                </div>
+                <h2 class="hero-title text-4xl md:text-6xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">DIA COMIGO</h2>
+            </div>
+
+            <div class="offer-card rounded-2xl p-8 md:p-12 text-center sorteio-glow">
+                <div class="flex justify-center mb-12">
+                    <div class="relative">
+                        <img src="sv (6).png"
+                              alt="Esther Veiga"
+                              class="w-56 h-56 md:w-72 md:h-72 rounded-full object-cover border-4 border-blue-500 pulse">
+                        <div class="absolute -bottom-4 -right-4 bg-blue-600 text-white px-5 py-2 rounded-full font-bold text-sm md:text-base">
+                            PRÊMIO
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-2xl mx-auto mb-12">
+                    <div class="bg-black bg-opacity-70 p-6 rounded-xl border border-blue-900">
+                        <p class="text-xl md:text-2xl mb-6 text-blue-300 font-medium">
+                            Você toparia passar um dia inteiro comigo... do jeitinho que quiser?
+                        </p>
+                        <p class="text-lg md:text-xl mb-4">
+                            Sem regras, sem roteiro… só eu e você. Cada R$1 vale um número pra concorrer. Sorteio dia 15 de julho.
+                        </p>
+                        <p class="text-lg md:text-xl mb-4">
+                            Quem ganhar, escolhe tudo: data, lugar e como quer me ter por perto. No meu apê de frente pro mar ou… onde você estiver.
+                        </p>
+                        <p class="text-xl md:text-2xl mt-6 text-pink-400 font-bold glow-text">
+                            Vai ficar só olhando ou vai tentar a sorte?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <a href="https://livepix.gg/vaquinha/Sorteio"
+                        class="btn-glow sorteio-btn py-5 px-10 rounded-full font-bold text-xl transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-gift mr-2"></i> PARTICIPAR DO SORTEIO
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-black bg-opacity-95 py-10 px-4 relative z-10 border-t border-pink-900">
         <div class="container mx-auto text-center">
@@ -476,37 +528,37 @@
             </p>
         </div>
     </footer>
-            
+
     <script>
         // Simple script for gallery hover pause
         document.addEventListener('DOMContentLoaded', function() {
             const gallery = document.querySelector('.gallery-slider');
-                                    
+            
             gallery.addEventListener('mouseenter', function() {
                 this.style.animationPlayState = 'paused';
             });
-                                    
+            
             gallery.addEventListener('mouseleave', function() {
                 this.style.animationPlayState = 'running';
             });
-                                    
+            
             // Countdown timer
             function updateCountdown() {
                 const now = new Date();
                 const target = new Date();
                 target.setHours(23, 59, 59, 0);
-                                                
+                
                 const diff = target - now;
-                                                
+                
                 const hours = Math.floor(diff / (1000 * 60 * 60));
                 const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-                                                
+                
                 document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
                 document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
                 document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
             }
-                                    
+            
             updateCountdown();
             setInterval(updateCountdown, 1000);
         });
